@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#cc7eb1"><meta name="description" content="Noted Backup は所有者本人だけが使う、暗号化バックアップ用の個人アプリです。予定している構成とデータの扱いをご案内します。"><title>Noted Backup — 個人用バックアップ</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">本文へ移動</a><header><a href="index.html">Noted Backup</a><nav aria-label="メイン"><a href="index.html" aria-current="page">概要</a><a href="privacy.html">プライバシー</a></nav></header>
+<main id="main"><div class="eyebrow">Personal backup · Owner only</div><h1>自分のデータを、<br>自分のために守る。</h1><p class="lead">Noted Backup は、所有者本人のファイルを暗号化し、Google Drive に世代管理付きで保存するための個人用アプリです。一般向けサービスや、新規ユーザーの登録は提供しません。</p>
+<div class="notice"><strong>現在の状態：構築準備中</strong><br>以下は予定している設計です。自動バックアップはまだ運用開始していません。バックアップの実行や保存期間を保証するものではありません。</div>
+<h2>予定している仕組み</h2><div class="flow" aria-label="バックアップの流れ"><div><strong>01 · Ubuntu VPS</strong><span>所有者が管理する環境で実行</span></div><div><strong>02 · restic</strong><span>転送前に暗号化・世代管理</span></div><div><strong>03 · Google Drive</strong><span>rclone 経由で暗号化済みデータを保存</span></div></div>
+<h2>Google アカウントへのアクセス</h2><p>所有者自身の Google OAuth デスクトップクライアントを使用し、要求する権限は <code>https://www.googleapis.com/auth/drive.file</code> のみに限定する予定です。このアプリでは、アプリ自身が作成するバックアップ用ファイルだけを扱います。Drive 全体へのアクセス権限は要求しません。</p>
+<h2>この公開ページについて</h2><p>このサイトはアプリの説明とプライバシー方針だけを掲載します。バックアップ内容、非公開のファイル、認証情報は掲載しません。このページから Google にログインしたり、ファイルをアップロードしたりすることはできません。</p><p><a href="privacy.html">データの取り扱いを確認する →</a></p>
+</main><footer>Noted Backup · 個人利用専用 · 記載日：2026年10月23日</footer></body></html>
